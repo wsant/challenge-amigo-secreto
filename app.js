@@ -26,7 +26,19 @@ function atualizarLista() {
         lista.appendChild(item);
     }
  }
- 
+
+ function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert('Não há amigos disponíveis para sortear.');
+        return
+    }
+
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[indiceAleatorio];
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = `O amigo secreto sorteado é: ${amigoSorteado}`;
+
+ }
 
 function limparCampo() {
     let campoDigiteUmNome = document.querySelector('input');
